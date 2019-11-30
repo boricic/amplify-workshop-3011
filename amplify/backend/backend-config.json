@@ -1,1 +1,9 @@
-{}
+{
+	"auth": {
+		"pets23a1ebaf": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	}
+}
