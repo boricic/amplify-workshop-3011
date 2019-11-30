@@ -7,6 +7,7 @@ export const getPet = `query GetPet($id: ID!) {
     name
     breed
     age
+    owner
   }
 }
 `;
@@ -17,6 +18,7 @@ export const listPets = `query ListPets($filter: ModelPetFilterInput, $limit: In
       name
       breed
       age
+      owner
     }
     nextToken
   }

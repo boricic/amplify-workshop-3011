@@ -10,6 +10,7 @@ export const createPet = `mutation CreatePet(
     name
     breed
     age
+    owner
   }
 }
 `;
@@ -22,6 +23,7 @@ export const updatePet = `mutation UpdatePet(
     name
     breed
     age
+    owner
   }
 }
 `;
@@ -34,6 +36,7 @@ export const deletePet = `mutation DeletePet(
     name
     breed
     age
+    owner
   }
 }
 `;

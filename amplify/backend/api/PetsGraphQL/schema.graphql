@@ -1,4 +1,4 @@
-type Pet @model {
+type Pet @model @auth(rules: [{allow: owner}]) {
   id: ID!
   name: String!
   breed: String!
