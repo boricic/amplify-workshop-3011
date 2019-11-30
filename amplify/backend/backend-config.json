@@ -22,5 +22,12 @@
 				}
 			}
 		}
+	},
+	"function": {
+		"breeds2": {
+			"service": "Lambda",
+			"providerPlugin": "awscloudformation",
+			"build": true
+		}
 	}
 }
