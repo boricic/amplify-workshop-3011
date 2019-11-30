@@ -63,7 +63,7 @@
 				"Timeout": "25",
 				"Code": {
 					"S3Bucket": "amplify-pets-dev-124158-deployment",
-					"S3Key": "amplify-builds/breeds2-576f2f5861796938675a-build.zip"
+					"S3Key": "amplify-builds/breeds2-4e45464e466153723858-build.zip"
 				}
 			}
 		},

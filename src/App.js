@@ -12,7 +12,7 @@ const CLIENT_ID = uuid()
 
 // create initial state
 const initialState = {
-  name: '', breed: '', age: 0, pets: []
+  name: '', breed: '', age: 0, pets: [], breeds: []
 }
 
 // create reducer to update state
@@ -20,6 +20,8 @@ function reducer(state, action) {
   switch (action.type) {
     case 'SETPETS':
       return { ...state, pets: action.pets }
+    case 'SETBREEDS':
+      return { ...state, breeds: action.breeds }
     case 'SETINPUT':
       return { ...state, [action.key]: action.value }
     default:
@@ -36,8 +38,12 @@ function App() {
 
   async function getData() {
     try {
+      const breedsData = await API.get('breeds', '/breeds')
+      console.log('data from REST API: ', breedsData)
+      dispatch({ type: 'SETBREEDS', breeds: breedsData })
+
       const petData = await API.graphql(graphqlOperation(listPets))
-      console.log('data from API: ', petData)
+      console.log('data from GRAPHQL: ', petData)
       dispatch({ type: 'SETPETS', pets: petData.data.listPets.items })
     } catch (err) {
       console.log('error fetching data..', err)
@@ -67,6 +73,10 @@ function App() {
     dispatch({ type: 'SETINPUT', key: e.target.name, value: e.target.value })
   }
 
+  function makeOption(option) {
+    return <option>{option}</option>
+  }
+
   // add UI with event handlers to manage user input
   return (
     <div>
@@ -76,12 +86,12 @@ function App() {
         onChange={onChange}
         value={state.name}
       />
-      <input
+      <select
         name='breed'
         placeholder='breed'
         onChange={onChange}
         value={state.breed}
-      />
+      >{state.breeds.map(makeOption)}</select>
       <input
         name='age'
         placeholder='age'

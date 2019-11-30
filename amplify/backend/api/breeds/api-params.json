@@ -1,0 +1,41 @@
+{
+    "paths": [
+        {
+            "name": "/breeds",
+            "lambdaFunction": "breeds2",
+            "privacy": {
+                "private": true,
+                "auth": [
+                    "/POST",
+                    "/GET",
+                    "/PUT",
+                    "/PATCH",
+                    "/DELETE"
+                ]
+            }
+        }
+    ],
+    "resourceName": "breeds",
+    "apiName": "breeds",
+    "functionArns": [
+        {
+            "lambdaFunction": "breeds2"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 0,
+        "authRoleName": "amplify-pets-dev-124158-authRole",
+        "unAuthRoleName": "amplify-pets-dev-124158-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "breeds2",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
