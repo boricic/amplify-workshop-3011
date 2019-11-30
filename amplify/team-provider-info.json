@@ -1,0 +1,15 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-pets-dev-124158-authRole",
+            "UnauthRoleArn": "arn:aws:iam::570915747777:role/amplify-pets-dev-124158-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::570915747777:role/amplify-pets-dev-124158-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-pets-dev-124158-deployment",
+            "UnauthRoleName": "amplify-pets-dev-124158-unauthRole",
+            "StackName": "amplify-pets-dev-124158",
+            "StackId": "arn:aws:cloudformation:us-east-1:570915747777:stack/amplify-pets-dev-124158/6c4562e0-1366-11ea-a794-0e58925d1f8e",
+            "AmplifyAppId": "d1cllb0g35xhij"
+        }
+    }
+}
